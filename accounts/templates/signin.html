@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% if error %}
+    {{ error }}
+<br><br>
+{% endif %}
+<h1>Login</h1>
+
+<form action="" method=POST>
+    {% csrf_token %}
+    <table>
+        {{ form.as_table }}
+    </table>
+    <input class="btn btn-primary" type="submit" value="Login">
+</form>
+
+{% endblock %}
